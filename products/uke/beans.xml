@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--
+     SPDX-FileCopyrightText: 2026 Paranoid Android
+     SPDX-License-Identifier: Apache-2.0
+-->
+<!-- Device and pineapple HAL repositories for uke are tracked in manifest/uke.xml -->
+<manifest />
