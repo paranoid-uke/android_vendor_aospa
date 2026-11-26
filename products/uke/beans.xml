@@ -3,5 +3,26 @@
      SPDX-FileCopyrightText: 2026 Paranoid Android
      SPDX-License-Identifier: Apache-2.0
 -->
-<!-- Device and pineapple HAL repositories for uke are tracked in manifest/uke.xml -->
-<manifest />
+<manifest>
+  <include name="../platforms/pineapple.xml" />
+
+  <!-- Device / Kernel / Vendor -->
+  <project path="device/xiaomi/uke" name="paranoid-uke/device_xiaomi_uke" remote="github" revision="A17" />
+  <project path="device/xiaomi/uke-kernel" name="paranoid-uke/kernel_xiaomi_uke" remote="github" revision="A17" />
+  <project path="vendor/xiaomi/uke" name="paranoid-uke/vendor_xiaomi_uke" remote="github" revision="A17" clone-depth="1" />
+
+  <!-- Hardware -->
+  <project path="hardware/xiaomi" name="paranoid-uke/android_hardware_xiaomi" remote="github" revision="calcite" />
+
+  <!-- Platform HAL overrides (paranoid-uke forks) -->
+  <project path="hardware/qcom/display" name="paranoid-uke/android_hardware_qcom_display" remote="github" revision="calcite-8650" />
+  <project path="hardware/qcom/gps" name="paranoid-uke/android_hardware_qcom_gps" remote="github" revision="calcite-8650" />
+  <project path="vendor/qcom/opensource/agm" name="paranoid-uke/android_vendor_qcom_opensource_agm" remote="github" revision="calcite-8650" />
+  <project path="vendor/qcom/opensource/audio-hal/primary-hal" name="paranoid-uke/android_hardware_qcom_audio" remote="github" revision="calcite-8650" />
+  <project path="vendor/qcom/opensource/audioreach-graphservices" name="paranoid-uke/android_vendor_qcom_opensource_audioreach-graphservices" remote="github" revision="calcite-8650" />
+  <project path="vendor/qcom/opensource/pal" name="paranoid-uke/android_vendor_qcom_opensource_arpal-lx" remote="github" revision="calcite-8650" />
+  <remove-project name="AOSPA/android_vendor_qcom_opensource_audio-hal_st-hal-ar" />
+
+  <!-- Packages -->
+  <project path="packages/apps/Launcher3" name="paranoid-uke/android_packages_apps_Launcher3" remote="github" revision="calcite" />
+</manifest>
