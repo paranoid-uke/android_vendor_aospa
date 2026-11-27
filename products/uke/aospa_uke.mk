@@ -13,6 +13,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 # Inherit from the custom device configuration.
 $(call inherit-product, device/xiaomi/uke/device.mk)
 
+# Wi-Fi only tablet
+TARGET_NO_TELEPHONY := true
+
 # Inherit from the AOSPA configuration.
 $(call inherit-product, vendor/aospa/target/product/aospa-target.mk)
 
