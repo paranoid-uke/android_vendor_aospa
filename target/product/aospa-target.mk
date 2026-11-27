@@ -222,12 +222,7 @@ PRODUCT_PACKAGES += \
     extphonelib.xml \
     extphonelib_product.xml \
     ims-ext-common \
-    ims_ext_common.xml
-
-ifneq ($(TARGET_NO_TELEPHONY), true)
-PRODUCT_PACKAGES += \
-    tcmiface \
-    telephony-ext \
+    ims_ext_common.xml \
     qti-telephony-hidl-wrapper \
     qti-telephony-hidl-wrapper-prd \
     qti_telephony_hidl_wrapper.xml \
@@ -235,15 +230,18 @@ PRODUCT_PACKAGES += \
     qti-telephony-utils \
     qti-telephony-utils-prd \
     qti_telephony_utils.xml \
-    qti_telephony_utils_prd.xml
-
-# Telephony - AOSP
-PRODUCT_PACKAGES += \
-    Stk
+    qti_telephony_utils_prd.xml \
+    tcmiface \
+    telephony-ext
 
 PRODUCT_BOOT_JARS += \
     tcmiface \
     telephony-ext
+
+# Telephony - AOSP
+ifneq ($(TARGET_NO_TELEPHONY), true)
+PRODUCT_PACKAGES += \
+    Stk
 endif
 
 # TextClassifier
